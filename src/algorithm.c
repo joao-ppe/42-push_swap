@@ -6,7 +6,7 @@
 /*   By: joao-ppe <joao-ppe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 15:09:00 by joao-ppe          #+#    #+#             */
-/*   Updated: 2024/01/17 15:49:34 by joao-ppe         ###   ########.fr       */
+/*   Updated: 2024/01/17 16:24:39 by joao-ppe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,24 +80,14 @@ void	sort_5(t_stack **a, t_stack **b)
 	t_stack	*smallest;
 
 	smallest = smallest_node(a);
-	if (smallest == *a)
-		operation(a, b, "pb");
-	else if (smallest == (*a)->next)
-	{
-		operation(a, NULL, "sa");
-		operation(a, b, "pb");
-	}
-	else if (smallest == last_node(*a))
-	{
+	if (smallest == last_node(*a))
 		operation(a, NULL, "rra");
-		operation(a, b, "pb");
-	}
 	else
 	{
-		operation(a, NULL, "rra");
-		operation(a, NULL, "rra");
-		operation(a, b, "pb");
+		while (smallest != *a)
+			operation(a, b, "ra");
 	}
+	operation(a, b, "pb");
 	sort_4(a, b);
 	operation(a, b, "pa");
 }
