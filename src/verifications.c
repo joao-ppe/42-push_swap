@@ -6,7 +6,7 @@
 /*   By: joao-ppe <joao-ppe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 15:49:46 by joao-ppe          #+#    #+#             */
-/*   Updated: 2023/10/16 18:04:44 by joao-ppe         ###   ########.fr       */
+/*   Updated: 2024/01/17 14:14:35 by joao-ppe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	check_elements(char **args)
 			if (!ft_isdigit(args[i][j]))
 				return (1);
 		}
-		if ((ft_atol(args[i]) > INT_MAX 
+		if ((ft_atol(args[i]) > INT_MAX
 				|| ft_atol(args[i]) < INT_MIN)
 			|| check_repetition(args, args[i], i))
 			return (1);
@@ -55,10 +55,7 @@ int	check_repetition(char **args, char *value, int n)
 	while (i < n)
 	{
 		if (ft_atoi(value) == ft_atoi(args[i]))
-		{
-			ft_printf("Found repeated value.\n");
 			return (1);
-		}
 		i++;
 	}
 	return (0);
