@@ -6,7 +6,7 @@
 /*   By: joao-ppe <joao-ppe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 14:26:40 by joao-ppe          #+#    #+#             */
-/*   Updated: 2024/01/17 14:24:13 by joao-ppe         ###   ########.fr       */
+/*   Updated: 2024/01/17 14:37:12 by joao-ppe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ char	**split_args(int argc, char **argv)
 	else if (argc > 2)
 		args = argv;
 	if (!args || check_args(args)
-		|| count_args(args) < 2)
+		|| count_args(args) == 0)
 	{
 		ft_printf("Error\n");
 		if (argc == 2)
