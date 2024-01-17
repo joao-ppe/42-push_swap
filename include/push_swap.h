@@ -6,7 +6,7 @@
 /*   By: joao-ppe <joao-ppe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 13:20:39 by joao-ppe          #+#    #+#             */
-/*   Updated: 2023/10/16 18:15:46 by joao-ppe         ###   ########.fr       */
+/*   Updated: 2024/01/17 15:47:09 by joao-ppe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,7 @@ void		sort_5(t_stack **a, t_stack **b);
 /// ALGORITHM UTILS ///
 void		operation(t_stack **a, t_stack **b, char *op);
 t_stack		*biggest_node(t_stack **stack);
+t_stack		*smallest_node(t_stack **stack);
 /// RADIX ///
 void		radix_sort(t_stack **a, t_stack **b);
 int			get_max_bits(t_stack **stack);

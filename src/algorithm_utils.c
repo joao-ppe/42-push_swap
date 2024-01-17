@@ -6,7 +6,7 @@
 /*   By: joao-ppe <joao-ppe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 13:01:07 by joao-ppe          #+#    #+#             */
-/*   Updated: 2023/10/11 15:43:13 by joao-ppe         ###   ########.fr       */
+/*   Updated: 2024/01/17 15:44:52 by joao-ppe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,4 +53,20 @@ t_stack	*biggest_node(t_stack **stack)
 		head = head->next;
 	}
 	return (biggest);
+}
+
+t_stack	*smallest_node(t_stack **stack)
+{
+	t_stack	*head;
+	t_stack	*smallest;
+
+	head = *stack;
+	smallest = head;
+	while (head != NULL)
+	{
+		if (smallest->value > head->value)
+			smallest = head;
+		head = head->next;
+	}
+	return (smallest);
 }
